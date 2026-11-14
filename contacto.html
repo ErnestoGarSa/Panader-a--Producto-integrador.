@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Trigo Dorado | Contacto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">🥖 El Trigo Dorado</a>
+      <button class="menu-toggle" id="menu-btn" aria-label="Abrir menú">
+        ☰
+      </button>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="cafeteria.html">Cafetería</a></li>
+          <li><a href="eventos.html">Pedidos Especiales</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="preguntas.html">FAQ</a></li>
+          <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contáctanos</h1>
+      <p class="subtitulo">Estamos listos para atender tus pedidos y dudas.</p>
+
+      <div class="contacto-container">
+        <div class="info-box">
+          <h2>Visítanos</h2>
+          <p><strong>📍 Dirección:</strong> Av. Reforma #452, Col. Centro.</p>
+          <p><strong>📞 Teléfono:</strong> (55) 1234-5678</p>
+          <p><strong>✉️ Correo:</strong> pedidos@eltrigodorado.com</p>
+          <br />
+          <h2>Horarios de Atención</h2>
+          <p><strong>Lunes a Sábado:</strong> 7:00 AM - 8:30 PM</p>
+          <p><strong>Domingos:</strong> 8:00 AM - 3:00 PM</p>
+        </div>
+
+        <form
+          onsubmit="
+            event.preventDefault();
+            alert(
+              '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.',
+            );
+            this.reset();
+          "
+        >
+          <h2>Envíanos un mensaje</h2>
+          <div class="form-grupo">
+            <label for="nombre">Nombre completo:</label>
+            <input
+              type="text"
+              id="nombre"
+              required
+              placeholder="Ej. María Pérez"
+            />
+          </div>
+          <div class="form-grupo">
+            <label for="email">Correo electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="maria@ejemplo.com"
+            />
+          </div>
+          <div class="form-grupo">
+            <label for="mensaje">Tu pedido o consulta:</label>
+            <textarea
+              id="mensaje"
+              rows="4"
+              required
+              placeholder="Escribe aquí qué productos te gustaría encargar..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 Panadería Artesanal El Trigo Dorado. Todos los derechos
+        reservados.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
